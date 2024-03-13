@@ -1,0 +1,269 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Varela+Round&display=swap');             
+@import url('https://fonts.cdnfonts.com/css/liquidism');/* banner */
+
+
+nav{
+
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: auto;
+    
+
+}
+
+.btag{
+  color: rgb(255, 255, 255);
+
+}
+
+.btag:hover{
+  color: rgb(233,75,60);
+  text-shadow: 2px 2px 4px  white;
+  font-size: large;
+  font-style: oblique;
+}
+nav ul li:hover a{
+  
+    color:rgb(208, 124, 15);
+    transition: 0.6s ease; 
+    font-weight: bold;
+    font-size: 15px;
+}
+nav ul li :first-child a{
+    border-bottom: 2px solid rgba(0, 224, 206, 0.705);
+    color:rgb(89, 194, 159);
+}
+nav ul li a{
+    color: rgb(233,75,60);;
+    text-decoration: none;
+
+
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    background:none;
+    color: rgb(255, 37, 37);
+}
+nav ul li{
+    padding: 0 5px;
+}
+
+/* ......MusicX........... */
+
+.col-md-12 {
+    padding: auto;
+    width: 1280px;
+    height: 500px;
+    background-color: aqua;
+    background-image: url(/static/MusicX/images/banner.jpg);
+    background-size: cover;
+}
+
+
+.tile{
+    color:whitesmoke;
+    position: absolute;
+    top: 20%;
+    left:25%;
+    transform: translate(-50%,50%);
+
+
+}
+.tile .music{
+    font-size: 120px;
+    color: transparent;
+    -webkit-text-stroke: 3px rgb(170, 116, 170);
+    position: relative;
+    font-weight: bolder;
+    font-family: ubantu;
+}
+
+.music::before{
+    content: "MusicX";
+    position: absolute;
+    width: 0%;
+    height:  100%;
+    overflow: hidden;
+    color: rgb(250, 250, 250);
+    /* border-right: 8px solid rgb(226, 220, 43); */
+    transition: 1s ease-in-out;
+
+}
+
+.music:hover::before{
+    width: 100%;
+    filter: drop-shadow(0 0 6px rgb(8, 2, 13)) ;
+}
+.para{
+    width: 250px;
+    color: white;
+    position: absolute;
+    top: 75%;
+    left:50%;
+    text-align: center;
+    transform: translate(-50%,50%);
+}
+
+
+.paragraph{
+    font-weight: bolder;
+    font-size: medium;
+}
+
+/* #card  */
+
+
+body {
+    background-color: #000000;
+    color: #e2c0c0;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .title {
+    padding-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: fantasy;
+    color:rgb(233,75,60);
+    border-bottom: 2px solid white;
+    
+}
+  
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition: transform .3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.7);
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: transform .3s ease-in-out;
+  }
+  
+  .card:hover .card-img-top {
+    transform: scale(1.1);
+  }
+  
+  .card-body {
+    padding: 10px 15px;
+    
+    background-color: rgb(255, 215, 0);
+    backdrop-filter: blur(5px);
+    border-radius: 0 0 10px 10px;
+    transition: transform .3s ease-in-out;
+  }
+  
+  .card:hover .card-body {
+    transform: translateY(-10px);
+  }
+  
+  .card-title {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: darkblue;
+  }
+  
+  .card-text {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: rgb(0, 0, 238);
+  }
+  
+  .play {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    background-color: #ff0080;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: background-color .3s ease-in-out;
+  }
+  
+  .play:hover {
+    background-color: #ff0066;
+  }
+
+  .owl-carousel .item{
+    /* border: 1px solid black; */
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;;
+   }
+   
+   .owl-next{
+    float:right;
+   }
+   .owl-prev{
+    float:left;
+   }
+   .owl-prev span{
+    font-size: 24px;
+    font-weight: bold;
+   }
+   .owl-next span{
+    font-size: 24px;
+    font-weight: bold;
+   }
+   
+   .bg-danger{
+       background-color: rgb(64, 75, 85);
+   }
+
+
+   /* ...........change pass..... */
+   .pass{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    font-style: oblique;
+   }
+
+
+
+/* OWL */
+
+.design{
+  background-color:rgb(170, 116, 170);
+  text-align: center;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.owl-carousel{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+
+
+
+   
+
+   

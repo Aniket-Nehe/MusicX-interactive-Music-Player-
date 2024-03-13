@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+         <div class="col-sm-8 offset-sm-2 shadow p-5">
+            <h3 class="mb-3 text-primary mr-4" style="text-align: center;    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bolder;
+            font-style: oblique; ">Sign Up</h3>
+          <hr>
+          <form action="" method="post" novalidate class="shadow p-5">
+           {% csrf_token %}
+           {% for f in mf %}
+            <div class="form-group">
+            {{f.label_tag}} {{f}} <small class="text-danger">{{f.errors|striptags}}</small> <br>
+            </div>
+           {% endfor %}
+           <input type="submit" class="btn btn-primary mt-4" style="margin-left:180px" value="Sign Up">
+           <br>
+           <div class="text-center text-primary fw-bold"><small>already have an account ? <a href="{% url 'login' %}"
+              class="text-danger">Sign in</a> </small></div>
+          </form>
+         </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>

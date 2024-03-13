@@ -1,0 +1,22 @@
+{% extends "MusicX/base.html" %}
+
+{% block body %}
+
+ <div class="heading">
+        <h1 style='color: aqua;'> CRUD Operations </h1>  
+    </div> 
+    <div class="container" class='shadow p-5'>
+        <div class="row">
+            <div class="col-sm-10 offset-sm-1 shadow p-5">
+                <h2 class="songheading"> ContactUs </h2>
+                <form action="" method="POST" class='shadow p-5'>
+                    {% csrf_token %}
+                    {{form}}
+                    <input type="submit" class="btn btn-success mt-4" style="margin-left: 260px;  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    font-weight: bolder;
+                    font-variant: small-caps;" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

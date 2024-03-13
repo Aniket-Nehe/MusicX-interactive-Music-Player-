@@ -1,0 +1,59 @@
+{% extends "MusicX/base.html" %}
+
+{% block body %}
+<body>
+    {% comment %} <div class="heading">
+        <h1> CRUD Operations </h1>  
+    </div> 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 songform">
+                <h2 class="songheading"> Song Form </h2>
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    {{cf}}
+                    <input type="submit" class="btn btn-success mt-4" value="New song">
+                </form>
+            </div> {% endcomment %}
+            <div class="col-md-8 songform" style="max-width: fit-content;">
+                <h2 class="songheading"> Song's Database </h2>
+                <table class="table table-hover ">
+                    <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Singer</th>
+                        <th scope="col">Tags</th>
+                        <th scope="col">Movie</th>
+                        <th scope="col">Song Banner</th>
+                        <th scope="col">Audio</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for i in sm %}
+                    <tr>
+                        <td><b>{{i.song_id}}</b></td>
+                        <td><b>{{i.name}}</b></td>
+                        <td><b>{{i.singer}}<b></td>
+                        <td><b>{{i.tags}}<b></td>
+                        <td><b>{{i.movie}}<b></td>
+                        <td><b>{{i.image}}<b></td>
+                        <td><b>{{i.Song}}<b></td>
+                        <td>
+                            <a href="{% url "update" i.song_id %}" class="btn btn-secondary btn-sm">Update</a>
+                            <form action="{% url "delete" i.song_id %}" method="POST" class="d-inline">
+                                {% csrf_token %}
+                                <input type="submit" class="btn btn-danger btn-sm" value="Delete">
+                            </form>   
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</body>
+{% endblock body %}

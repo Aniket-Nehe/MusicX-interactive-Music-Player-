@@ -1,0 +1,30 @@
+{% extends "musicX/base.html" %}
+{% block title %}All Songs🎶{% endblock title %}
+{% load static %}
+<link rel="stylesheet" href='{% static "MusicX/css/main.css" %}' type="text/css" />
+
+{% block body %}
+
+<body style="background-color: black;">
+  <h1 class="all_song">All Songs❤️‍🔥🫶</h1><br/>
+<div class="container">
+{% for i in songs reversed %}
+<div class="card mb-3" style="max-width:940px; margin-top :3%;">
+    <div class="row no-gutters">
+      <div class="col-md-6">
+        <img src="/media/{{i.image}}" alt="..." height="200px" width=200px>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title" style="color :green;"><strong>Title :</strong>{{i.name}} From ("{{i.movie}}")</h5>
+          <p class="card-text"><strong>Artist :</strong>{{i.singer}}
+          <p class="card-text">{{i.tags}}</p>
+         <a href="/musicX/Songs/{{i.song_id}}"><button  class="btn btn-outline-danger">Play Song</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+  </div>
+</body>
+{% endblock %}

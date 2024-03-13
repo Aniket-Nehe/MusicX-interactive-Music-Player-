@@ -1,0 +1,30 @@
+{% extends "musicX/base.html" %}
+{% block title %}All Songs🎶{% endblock title %}
+{% block body %}
+    {% include "MusicX/nav.html" %}
+
+    {% include "MusicX/cards.html" %}
+{% endblock %}
+{% comment %} <!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'MusicX/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'MusicX/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'MusicX/css/main.css' %}">
+    <title>{% block title %}{% endblock title %} MusicX</title>
+</head>
+<body>
+              <!-- Navbar -->
+    {% include "MusicX/nav.html" %}
+
+    {% include "MusicX/cards.html" %}
+    
+     <script src="{% static 'MusicX/js/bootstrap.min.js' %}"></script>
+     <script src="{% static 'MusicX/js/fontawesome.js' %}"></script>
+     <script src="{% static 'MusicX/js/jquery.js' %}"></script>
+     <script src="{% static 'MusicX/js/popper.js' %}"></script>
+</body>
+</html> {% endcomment %}

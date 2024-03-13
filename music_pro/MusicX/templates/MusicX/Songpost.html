@@ -1,0 +1,66 @@
+{% extends "musicX/base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'MusicX/css/songpost.css' %}">
+  
+{% endblock css %}
+  
+
+{% block body %}
+
+<div class="outer-container">
+    <img src="/media/{{songs.image}}" alt="Harry Styles' Fine Line album cover" id="background" />
+    <audio src="\media\{{songs.Song}}" id="track"></audio>
+  </div>
+  
+  <div class="player-container">
+    <img src="/media/{{songs.image}}" alt="{{songs.name}}" id="thumbnail" />
+  
+    <div class="box">
+      <div class="play-pause">
+        <i class="far fa-play-circle fa-3x" id="play"></i>
+        <i class="far fa-pause-circle fa-3x" id="pause"></i>
+      </div>
+      <div class="track-info">
+        <div id="track-artist">{{songs.singer}}</div>
+        <div id="track-title">{{songs.name}}</div>
+      </div>
+      <div class="next-prev">
+        <i class="far fa-arrow-alt-circle-left fa-2x" id="prev-track"></i>
+        <i class="far fa-arrow-alt-circle-right fa-2x" id="next-track"></i>
+      </div>
+      <div class="progress-bar">
+        <input type="range" id="progressBar" min="0" max="" value="0" />
+      </div>
+      <div class="track-time">
+        <div id="currentTime"></div>
+        <div id="durationTime"></div>
+      </div>
+      <div class="container">
+        <form action="/MusicX/favourite" method="POST"> {% csrf_token %}
+            <input type="hidden" name="music_id" value="{{songs.song_id}}">
+            <button type="submit" class="btn btn-outline-danger favorite">Add Favorite</button>
+        </form>
+        <form action="{% url 'buynowpayment' songs.song_id %}" method="POST" >{% csrf_token %}
+          <button type="submit" class="btn btn-outline-danger favorite">Download</button>
+        </form>
+    </div>
+    </div>
+</div>
+
+{% if message %}
+<script>
+    Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "{{message}}",
+        showConfirmButton: false,
+        timer: 1500
+      });
+</script> 
+{% endif %}
+
+
+{% endblock %}
+

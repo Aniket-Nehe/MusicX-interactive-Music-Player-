@@ -1,0 +1,77 @@
+{% extends "MusicX/basic.html" %}
+{% block body %}
+<!-- 1st Product Slider -->
+<body style="background-color:black">
+<div class="m-3">
+  <a href="{% url 'treanding' %}"><h2 class='title'>Trending Now</h2></a>
+  </div>
+ <!-- Slider 1 -->
+ <div class="owl-carousel" id="slider1">
+  {% for i in songs %}
+  {% if 'TREANDING' == i.categories %}
+  <div class="design">
+  <a href="/musicX/Songs/{{i.song_id}}" class="btn"><div class="item"><img src="/media/{{i.image}}" alt="" height="200px"><span class="fw-bold"><b>{{i.name}}</b></span><br><p><span>{{i.singer}}</span></p></div></a>
+</div>
+  {% endif %}
+  {% endfor %}
+ </div>
+</div>
+<hr>
+<div class="m-3">
+  <a href="{% url 'hindi' %}"><h2 class='title'> Hindi Hits❤️‍🔥</h2></a>
+  <!-- Slider 1 -->
+  <div class="owl-carousel" id="slider2">
+   {% for i in songs %}
+   {% if 'HINDI' == i.categories %}
+   <div class="design">
+   <a href="/musicX/Songs/{{i.song_id}}" class="btn"><div class="item"><img src="/media/{{i.image}}" alt="" height="200px"><span class="fw-bold"><b>{{i.name}}</b></span><br><span class="fs-5">{{i.movie}}</span></div></a>
+  </div>
+   {% endif %}
+   {% endfor %}
+  </div>
+ </div>
+ <hr>
+
+ <div class="m-3">
+  <a href="{% url 'marathi' %}"><h2 class='title'> Marathi New❤️‍🔥</h2></a>
+  <!-- Slider 1 -->
+  <div class="owl-carousel" id="slider3">
+   {% for i in songs %}
+   {% if 'MARATHI' == i.categories %}
+   <div class="design">
+   <a href="/musicX/Songs/{{i.song_id}}" class="btn"><div class="item"><img src="/media/{{i.image}}" alt="" height="200px"><span class="fw-bold"><b>{{i.name}}</b></span><br><span class="fs-5">{{i.movie}}</span></div></a>
+  </div>
+   {% endif %}
+   {% endfor %}
+  </div>
+ </div>
+ <hr>
+ <div class="m-3">
+  <a href="{% url 'english' %}"><h2 class='title'> English ❤️‍🔥</h2></a>
+  <!-- Slider 1 -->
+  <div class="owl-carousel" id="slider4">
+   {% for i in songs %}
+   {% if 'ENGLISH' == i.categories %}
+   <div class="design">
+   <a href="/musicX/Songs/{{i.song_id}}" class="btn"><div class="item"><img src="/media/{{i.image}}" alt="" height="200px"><span class="fw-bold"><b>{{i.name}}</b></span><br><span class="fs-5">{{i.movie}}</span></div></a>
+  </div>
+   {% endif %}
+   {% endfor %}
+  </div>
+ </div>
+ <hr>
+ <div class="m-3">
+  <a href="{% url 'devotional' %}"><h2 class='title'> Devotional❤️‍🔥</h2></a>
+  <!-- Slider 1 -->
+  <div class="owl-carousel" id="slider5">
+   {% for i in songs %}
+   {% if 'DEVOTIONAL' == i.categories %}
+   <div class="design">
+   <a href="/musicX/Songs/{{i.song_id}}" class="btn"><div class="item"><img src="/media/{{i.image}}" alt="" height="200px" width=><span class="fw-bold"><b>{{i.name}}</b></span><br><span class="fs-5">{{i.movie}}</span></div></a>
+  </div>
+   {% endif %}
+   {% endfor %}
+  </div>
+ </div>
+</body>
+{% endblock %}

@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f1f1f1;
+}
+
+.about-us {
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px 0;
+  text-align: center;
+  color: #333;
+}
+
+.about-us h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #4caf50;
+  font-weight: bolder;
+  animation: rainbow 5s linear infinite;
+}
+
+.about-us p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+.join-us {
+  background-color: #fff;
+  padding: 50px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.join-us h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #2196f3;
+}
+
+.join-us p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.social-media a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  text-align: center;
+  line-height: 50px;
+  color: #333;
+  text-decoration: none;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.social-media a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.social-media a:nth-child(1) {
+  animation: social-icon 5s ease infinite;
+}
+
+.social-media a:nth-child(2) {
+  animation: social-icon 5s 1s ease infinite;
+}
+
+.social-media a:nth-child(3) {
+  animation: social-icon 5s 2s ease infinite;
+}
+
+@keyframes rainbow {
+  0% {
+    color: #e91e63;
+  }
+  15% {
+    color: #9c27b0;
+  }
+  30% {
+    color: #673ab7;
+  }
+  45% {
+    color: #3f51b5;
+  }
+  60% {
+    color: #2196f3;
+  }
+  75% {
+    color: #00bcd4;
+  }
+  90% {
+    color: #009688;
+  }
+  100% {
+    color: #4caf50;
+  }
+}
+
+@keyframes social-icon {
+  0% {
+    background-color: #f1f1f1;
+  }
+  50% {
+    background-color: #333;
+  }
+  100% {
+    background-color: #f1f1f1;
+  }
+}
+
+
+main{
+    background-color: rgb(154, 208, 194);
+}
+body{
+    background-color: rgb(38, 80, 115);
+    
+}
+
+
+
+
+/* CRUD CSS */
+
+.name{
+  width: auto;
+  font-size: large;
+}
+
+.heading{
+  text-align: center;
+  margin-top: 30px;
+  color: azure;
+  font-weight:bolder;
+
+}
+
+
+label {
+  font-size: 20px;
+  margin-top: 10px;
+  color: rgb(0, 0, 0);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bolder;
+  font-variant: small-caps;
+}
+
+.table{
+  margin-top: 30px;
+}
+
+b{
+  color: rgb(211, 199, 31);
+}
+
+th{
+  color: rgb(5, 15, 1);
+}
+
+.update{
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.updateheading{
+  border: 2px double white;
+  border-radius: 20px;
+  background-color: rgb(187, 4, 4);
+  
+}
+
+.cf{
+  margin-left: 40px;
+}
+
+.songheading{
+  color: rgb(11, 235, 74);
+  padding-left: 260px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bolder;
+  font-variant: small-caps;
+}

@@ -1,0 +1,25 @@
+{% extends "MusicX/base.html" %}
+
+{% load static %}
+<link rel="stylesheet" href='{% static "MusicX/css/main.css" %}' type="text/css" />
+
+{% block body %}
+<body style="background-color: black;">
+  <h2 class="title">Marathi🔥</h2>
+  <div class="row" style="padding-top: 2%; "> 
+   {% for i in songs %}
+ <div style="padding-left: 6%;">
+  <div class="card" style="width: 18rem;padding-top: 3%;">
+    <img src="/media/{{i.image}}" class="card-img-top" alt="song Banner">
+    <div class="card-body">
+      <h5 class="card-title">{{i.name}} (From "{{i.movie}}")</h5>
+      <p class="card-text"> -{{i.singer}}.</p>
+      <p class="card-text">{{i.tags}}.</p>
+      <a href="/musicX/Songs/{{i.song_id}}" class="play">Play Song</a>
+    </div>
+  </div>
+ </div>
+ {% endfor %}
+ </div>
+ {% endblock %}
+ 
